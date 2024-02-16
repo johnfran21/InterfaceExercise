@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace InterfaceExercise
 {
@@ -76,6 +77,19 @@ namespace InterfaceExercise
             };
 
             //Creatively display and organize their values
+
+            var carList = new List<IVehicle>()
+            {
+                testCar, testTruck, testSuv
+            };
+
+            foreach (IVehicle car in carList)
+            {
+                Console.WriteLine($"{car.NumberOfWheels}, {car.NumberOfWindows}, {car.EngineType}, {car.HasTrunk} ");
+            }
+
+            testSuv.DisplayDetails();
+
 
             //Option for displaying values: 
             //Create a stubbed out method called DisplayDetails in your IVehicle interface.
